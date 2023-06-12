@@ -7,7 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IWeatherForecastGrain, WeatherForecastGrain>();
+builder.Services.AddOrleansClient(clientBuilder => clientBuilder.UseLocalhostClustering());
 
 var app = builder.Build();
 

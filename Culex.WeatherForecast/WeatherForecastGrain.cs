@@ -1,13 +1,13 @@
 namespace Culex.WeatherForecast;
 
-public class WeatherForecastGrain : IWeatherForecastGrain
-{
+using Orleans;
 
-    private static readonly string[] Summaries = new[]
+public sealed class WeatherForecastGrain : Grain, IWeatherForecastGrain
 {
+    private static readonly string[] Summaries = new[]
+    {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
-
 
     public async Task<List<WeatherForecast>> GetForecastAsync()
     {

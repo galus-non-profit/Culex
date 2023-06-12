@@ -1,12 +1,15 @@
 namespace Culex.WeatherForecast;
 
+using Orleans;
+
+[GenerateSerializer]
 public class WeatherForecast
 {
-    public DateTime Date { get; set; }
+    [Id(0)] public DateTime Date { get; set; }
 
-    public int TemperatureC { get; set; }
+    [Id(1)] public int TemperatureC { get; set; }
 
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-    public string? Summary { get; set; }
+    [Id(2)] public string? Summary { get; set; }
 }

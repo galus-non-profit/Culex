@@ -7,23 +7,19 @@ using Culex.WeatherForecast;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
     private readonly ILogger<WeatherForecastController> _logger;
-    private readonly IWeatherForecastGrain weatherForecastGrain;
-    public WeatherForecastController(ILogger<WeatherForecastController> logger, IWeatherForecastGrain weatherForecastGrain)
+    private readonly IGrainFactory grainFactory;
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IGrainFactory grainFactory)
     {
         _logger = logger;
-        this.weatherForecastGrain = weatherForecastGrain;
+        this.grainFactory = grainFactory;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
-        var result = await this.weatherForecastGrain.GetForecastAsync();
+        var grain = this.grainFactory.GetGrain<IWeatherForecastGrain>(Guid.Empty);
+        var result = await grain.GetForecastAsync();
 
         return result;
     }

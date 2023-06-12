@@ -1,6 +1,8 @@
 ﻿namespace Culex.WeatherForecast;
 
-public interface IWeatherForecastGrain
+using Orleans;
+
+public interface IWeatherForecastGrain : IGrainWithGuidKey
 {
     Task<List<WeatherForecast>> GetForecastAsync();
 }
