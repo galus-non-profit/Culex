@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Culex.WebApi", "Culex.WebApi\Culex.WebApi.csproj", "{44F88E56-C4C7-4A3E-853B-E785E020084B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Culex.WeatherForecast", "Culex.WeatherForecast\Culex.WeatherForecast.csproj", "{2AE706A0-9990-4E96-AEE5-175265618CC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Culex.WeatherForecast.Contracts", "Culex.WeatherForecast.Contracts\Culex.WeatherForecast.Contracts.csproj", "{6ACED9DD-D7E8-4F59-970D-6859F177BD33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F88E56-C4C7-4A3E-853B-E785E020084B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F88E56-C4C7-4A3E-853B-E785E020084B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F88E56-C4C7-4A3E-853B-E785E020084B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F88E56-C4C7-4A3E-853B-E785E020084B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE706A0-9990-4E96-AEE5-175265618CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE706A0-9990-4E96-AEE5-175265618CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE706A0-9990-4E96-AEE5-175265618CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE706A0-9990-4E96-AEE5-175265618CC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ACED9DD-D7E8-4F59-970D-6859F177BD33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ACED9DD-D7E8-4F59-970D-6859F177BD33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ACED9DD-D7E8-4F59-970D-6859F177BD33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ACED9DD-D7E8-4F59-970D-6859F177BD33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
